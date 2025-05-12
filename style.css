@@ -1,0 +1,372 @@
+.container {
+    max-width: 1100px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+}
+  
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5px;
+    color:aliceblue
+
+}
+  
+.logo {
+    font-size: 30px;
+    font-weight: 650;
+    color: beige;
+    display: flex;
+}
+.pic::before {
+  content: "";
+  display: inline-block;
+  width: 30px; 
+  height: 30px;
+  background-image: url(assets/CHAT.jpeg); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px; 
+  vertical-align: middle;
+}
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin-right: 50px;
+    font-size: x-large;
+    
+}
+  
+.nav-link {
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+    left: 15px;
+}
+
+.nav-link:hover{
+    color: white;
+    transform: translateY(-3px);
+    color:beige;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+
+
+}
+
+.auth-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: right;
+  }
+  .button {
+    width: 120px;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    border-color: white;
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+  }
+  .button-text {
+    color: white;
+    border-color: white;
+  }
+  .button-text:hover{
+    color:black;
+  }
+  .button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: beige;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button:hover::before {
+    scale: 3;
+  }
+  
+  .button:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(7, 28, 99, 0.4);
+  }
+  
+  .button:active {
+    scale: 1;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 0;
+    
+}
+ 
+  #he{
+    background-color: #110b61;
+  }
+ 
+.hero-text {
+    text-align: center;
+    max-width: 400px;
+    margin-left: 400px;
+}
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.cta-button {
+    display: inline-block;
+    background-color: #0a0c88;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+#body {
+    background-color: rgba(163, 205, 221, 0.425);
+}
+.auth-btns {
+   display: flex;
+}
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: aliceblue;
+  color: black;
+}
+
+.a1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 100px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.a2 {
+  max-width: 500px;
+}
+
+.a2 h1 {
+  font-size: 60px;
+  padding-bottom: 60px;
+  
+}
+.a3 {
+  padding: 12px 25px;
+  background-color: #ff5ea5;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 2cap;
+}
+
+.image img {
+  max-width: 700x;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  height: 700px;
+}
+.image {
+  position: relative;
+  display: inline-block;
+}
+
+.image::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 119, 255, 0.6), transparent 70%);
+  filter: blur(60px);
+  z-index: 0;
+}
+.form {
+  position: relative;
+  margin-bottom: 60px;
+  margin-left: 25%;
+  margin-right: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 35px;
+  border-radius: 20px;
+  position: relative;
+  background-color:  #110b61;
+  color: #fff;
+  border: 5px solid #110b61;
+}
+
+.title {
+  font-size: 33px;
+  font-weight: 1000;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: #00bfff;
+  margin-left: 35%;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 2s linear infinite;
+}
+
+.title::before,
+.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #00bfff;
+}
+
+.message, 
+.signin {
+  font-size: 16.5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.signin a {
+  color: #00bfff;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 35px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  color: #110b61;
+  width: 100%;
+  padding: 20px 05px 05px 10px;
+  outline: 0;
+  border: 3px solid #110b61;
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  color: #110b6;
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 12.5px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+  color: #00bfff;
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.input {
+  font-size: medium;
+}
+
+.submit {
+  margin-left: 25%;
+  margin-right: 25%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+  background-color: #00bfff;
+}
+
+.submit:hover {
+  background-color: #00bfff96;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+} 
+.pre{
+  width: 50%;
+}
+.no{
+width: 50%;
+} 
+.input{
+  background-color: rgba(163, 205, 221, 0.425);
+}
+.hafsa{
+  text-decoration: none;
+  color: #fff;
+}
+a.hafsa:hover{
+  color: black;
+}

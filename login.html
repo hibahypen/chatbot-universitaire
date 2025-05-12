@@ -1,0 +1,168 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>login page</title>
+    <link href="index.html">
+    <style>
+.form {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 900px;
+  padding: 35px;
+  border-radius: 20px;
+  position: relative;
+  background-color: #00bfff;;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.title {
+  font-size: 45px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: black;
+  margin-right: 50%;
+  margin-left: 35%;
+
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 2s linear infinite;
+}
+
+.title::before,
+.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: black;
+}
+
+.message, 
+.signin {
+  font-size: 18px;
+  color: rgba(14, 4, 4, 0.7);
+}
+
+.signin {
+  text-align: center;
+  font-size: 20px;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+  color: black;
+}
+
+.signin a {
+  color: white;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  background-color: white;
+  color: #fff;
+  width: 100%;
+  padding: 20px 05px 05px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  color: black;
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 12.5px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+  color:black;
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.input {
+  font-size: medium;
+  color: black;
+}
+
+.submit {
+  justify-content: center;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+  background-color: black;
+}
+
+.submit:hover {
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <form class="form">
+        <p class="title">chatbot</p>
+        <p class="message"><b>Connectez-vous</b></p>
+               
+        <label>
+            <input class="input" type="email" placeholder="" required="">
+            <span>Email</span>
+        </label> 
+            
+        <label>
+            <input class="input" type="password" placeholder="" required="">
+            <span>Mot de passe</span>
+        </label>
+        <button class="submit">Submit</button>
+        <p class="signin">J'ai pas un compte<a href="index.html">Sign up</a> </p>
+    </form>
+  </body>
+</html>
