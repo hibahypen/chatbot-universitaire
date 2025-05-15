@@ -5,23 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>University Chatbot</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+function validerFormulaire() {
+  var nom = document.getElementById("Last-Name").value;
+  var prenom = document.getElementById("First-Name").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("psswd").value;
+  var pasword = document.getElementById("ppswd").value;
+
+  if (nom === "" || prenom === "" || email === "" || password === "" || pasword === "") {
+    alert("Tous les champs sont obligatoires");
+    return false;
+  }
+
+  if (!validerEmail(email)) {
+    alert("Adresse email invalide");
+    return false;
+  }
+
+  if (password.length < 8) {
+    alert("Le mot de passe doit contenir au moins 8 caractères");
+    return false;
+  }
+
+  if (password !== pasword) {
+    alert("Les mots de passe ne correspondent pas");
+    return false;
+  }
+
+  return true;
+}
+
+function validerEmail(email) {
+  var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return regex.test(email);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("valider").addEventListener("click", function (e) {
+    e.preventDefault(); // Empêche l’envoi du formulaire
+
+    if (validerFormulaire()) {
+      alert("Formulaire valide");
+      // ✅ Redirection ici
+      window.location.href = "chatbot.html";
+    }
+  });
+});
+</script>
+
+
 </head>
 <body id="body">
     <header id="he">
-        <div class="container">
-          <nav class="navbar">
-            <div class="logo">
+        <div class="cont">
+          <nav class="DACIA">
+            <div class="PICTURE">
               
-              <i class="fas fa-book"></i>
+              <i class="book"></i>
               <span class="pic">chatbot universitaire</span>
           
           </div>
-            <ul class="nav-menu">
+            <ul class="menu">
               <li><a href="#FOOT" class="nav-link">À propos</a></li>
               <li><a href="#FOOT" class="nav-link">Ressources</a></li>
               <li><a href="#FOOT" class="nav-link">Contact</a></li>
             </ul>
-            <div class="auth-btns">
+            <div class="auth">
               <a href="Login_Register2.html" target="_blank">
                 <button class="button">
                 <div class="button-text">
@@ -48,36 +98,285 @@
         <div class="image">
           <img src="assets/ai.jpg" alt="Chatbot" />
         </div>
+        </div>
+        <div>
+    <section>
+      <div class="feat">
+                <div class="fe">
+                    <div class="fet">💬</div>
+                    <h3>Chatbot Intelligent</h3>
+                    <p>Posez vos questions académiques et obtenez des réponses précises instantanément grâce à notre IA spécialement entraînée.</p>
+                </div>
+                
+                <div class="fe">
+                    <div class="fet">📅</div>
+                    <h3>Planification & Rappels</h3>
+                    <p>Organisez vos révisions optimalement et recevez des rappels pour vos examens et devoirs sans jamais rien oublier.</p>
+                </div>
+                
+                <div class="fe">
+                    <div class="fet">📚</div>
+                    <h3>Ressources Personnalisées</h3>
+                    <p>Accédez à des recommandations de cours, exercices et vidéos adaptées à votre style d'apprentissage.</p>
+                </div>
+                
+                <div class="fe">
+                    <div class="fet">📱</div>
+                    <h3>Notifications Multiplateforme</h3>
+                    <p>Recevez vos rappels sur WhatsApp, Telegram ou par Email selon votre préférence.</p>
+                </div>
+                
+                <div class="fe">
+                    <div class="fet">📊</div>
+                    <h3>Suivi de Progression</h3>
+                    <p>Visualisez votre avancement et identifiez les domaines nécessitant plus d'attention.</p>
+                </div>
+                
+                <div class="fe">
+                    <div class="fet">🧠</div>
+                    <h3>Techniques d'Étude</h3>
+                    <p>Bénéficiez de conseils personnalisés sur les meilleures méthodes d'apprentissage pour maximiser votre efficacité.</p>
+                </div>
+            </div>
+        </div>
+      </div>
+        </div>
+      </section>
+    </div>
+    <section class="com" id="com">
+        <div class="container1">
+            <div class="sect">
+                <h2>Comment ça marche</h2>
+                <p>Découvrez comment StudyAI vous accompagne dans vos études</p>
+            </div>
+            
+            <div class="ONE">
+                <div class="ONEE">
+                    <div class="ONE1">1</div>
+                    <div class="ONE2">
+                        <h3>Inscrivez-vous et personnalisez votre profil</h3>
+                        <p>Créez votre compte et indiquez vos matières, votre emploi du temps et vos préférences d'apprentissage.</p>
+                    </div>
+                </div>
+                
+                <div class="ONEE">
+                    <div class="ONE1">2</div>
+                    <div class="ONE2">
+                        <h3>Ajoutez vos cours et échéances</h3>
+                        <p>Intégrez vos examens, devoirs et projets pour que l'IA puisse organiser votre planning de révision.</p>
+                    </div>
+                </div>
+                
+                <div class="ONEE">
+                    <div class="ONE1">3</div>
+                    <div class="ONE2">
+                        <h3>Interagissez avec l'assistant IA</h3>
+                        <p>Posez vos questions, demandez des conseils ou sollicitez des ressources via notre interface de chat intuitive.</p>
+                    </div>
+                </div>
+                
+                <div class="ONEE">
+                    <div class="ONE1">4</div>
+                    <div class="ONE2">
+                        <h3>Recevez des notifications personnalisées</h3>
+                        <p>Soyez informé des échéances et des révisions planifiées via votre canal de communication préféré.</p>
+                    </div>
+                </div>
+                <div class="ONEE">
+                    <div class="ONE1">5</div>
+                    <div class="ONE2">
+                        <h3>Suivez vos progrès</h3>
+                        <p>Visualisez votre avancement et ajustez votre stratégie d'apprentissage grâce aux analyses de l'IA.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials" id="testimonials">
+        <div class="container1">
+            <div class="sect">
+                <h2>Témoignages</h2>
+                <p>Ce que nos utilisateurs disent de StudyAI</p>
+            </div>
+            
+            <div class="testimonialfeat">
+                <div class="testimonialfe">
+                    <div class="testimonialtext">
+                        "Grâce à StudyAI, j'ai pu organiser efficacement mes révisions pour mes partiels. Les rappels m'ont permis de ne jamais être pris au dépourvu et les ressources recommandées étaient parfaitement adaptées à mon style d'apprentissage."
+                    </div>
+                    <div class="testimonialauthor">Thomas D., étudiant en droit</div>
+                </div>
+                
+                <div class="testimonialfe">
+                    <div class="testimonialtext">
+                        "Je me sentais dépassée par la quantité de travail en école d'ingénieur. StudyAI m'a aidée à planifier mon temps de manière optimale et à me concentrer sur les points essentiels. J'ai gagné en efficacité et en sérénité !"
+                    </div>
+                    <div class="testimonialauthor">Marie L., étudiante en génie civil</div>
+                </div>
+                
+                <div class="testimonialfe">
+                    <div class="testimonialtext">
+                        "Le chatbot de StudyAI répond à mes questions à toute heure, même quand je révise tard le soir. C'est comme avoir un tuteur personnel disponible 24h/24. Les explications sont claires et adaptées à mon niveau."
+                    </div>
+                    <div class="testimonial-author">Karim B., étudiant en médecine</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pricing" id="pricing">
+        <div class="container1">
+            <div class="sect">
+                <h2>Forfaits</h2>
+                <p>Choisissez l'offre qui correspond le mieux à vos besoins</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Gratuit</h3>
+                        <p>0€/mois</p>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Accès au chatbot (limité)</li>
+                            <li>Planification basique</li>
+                            <li>Rappels par email uniquement</li>
+                            <li>5 questions par jour</li>
+                        </ul>
+                    </div>
+                    
+                   
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Étudiant</h3>
+                        <p>5,99€/mois</p>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Accès illimité au chatbot</li>
+                            <li>Planification avancée</li>
+                            <li>Rappels multiplateforme</li>
+                            <li>Ressources personnalisées</li>
+                            <li>Suivi de progression</li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <p>9,99€/mois</p>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Toutes les fonctionnalités Étudiant</li>
+                            <li>Tutorat IA personnalisé</li>
+                            <li>Analyse approfondie des performances</li>
+                            <li>Accès à la bibliothèque de ressources premium</li>
+                            <li>Support prioritaire</li>
+                        </ul>
+                    </div>
+                       
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="fac" id="fac">
+        <div class="container1">
+            <div class="sect">
+                <h2>Questions Fréquentes</h2>
+                <p>Trouvez les réponses à vos interrogations</p>
+            </div>
+            
+            <div class="faclist">
+                <div class="facitem">
+                    <div class="facquestion">
+                        Comment StudyAI peut-il m'aider à mieux étudier ?
+                        <span>+</span>
+                    </div>
+                    <div class="facanswer">
+                        StudyAI utilise l'intelligence artificielle pour analyser votre profil d'apprentissage, vos échéances et vos matières afin de créer un planning de révision optimisé. L'assistant vous aide également à comprendre les concepts difficiles, vous recommande des ressources adaptées et vous envoie des rappels pour maintenir votre rythme d'étude.
+                    </div>
+                </div>
+                
+                <div class="facitem">
+                    <div class="facquestion">
+                        Mes données personnelles sont-elles sécurisées ?
+                        <span>+</span>
+                    </div>
+                    <div class="facanswer">
+                        Absolument. La confidentialité de vos données est notre priorité. Nous utilisons un chiffrement de bout en bout et nous ne partageons jamais vos informations avec des tiers. Vous pouvez consulter notre politique de confidentialité pour plus de détails.
+                    </div>
+                </div>
+                
+                <div class="facitem">
+                    <div class="facquestion">
+                        StudyAI fonctionne-t-il pour toutes les disciplines ?
+                        <span>+</span>
+                    </div>
+                    <div class="facanswer">
+                        Oui, StudyAI est conçu pour s'adapter à toutes les disciplines universitaires. Notre IA a été entraînée sur un large éventail de domaines académiques et peut vous assister que vous étudiiez les sciences, les lettres, le droit, la médecine ou tout autre domaine.
+                    </div>
+                </div>
+                
+                <div class="facitem">
+                    <div class="facquestion">
+                        Puis-je utiliser StudyAI sur mon téléphone ?
+                        <span>+</span>
+                    </div>
+                    <div class="facanswer">
+                        Bien sûr ! StudyAI est disponible sur tous les appareils via notre site web responsive ou notre application mobile. Vous pouvez ainsi accéder à votre assistant d'études où que vous soyez.
+                    </div>
+                </div>
+                
+                <div class="facitem">
+                    <div class="facquestion">
+                        Comment les notifications fonctionnent-elles ?
+                        <span>+</span>
+                    </div>
+                    <div class="facanswer">
+                        Vous pouvez choisir de recevoir vos notifications par email, WhatsApp ou Telegram. Vous définissez la fréquence et le type d'informations que vous souhaitez recevoir (rappels d'échéances, suggestions de révision, etc.). Tout est personnalisable depuis votre tableau de bord.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
       </div> <form class="form" id="hiba">
         <p class="title">Chatbot</p>
         <p class="message"><b>Inscrivez-vous au chatbot universitaire !</b></p>
           <div class="flex">
             <label class="pre">
-              <input type="text" class="input" placeholder="" name="name" required="" id="First-Name">
-                <span>Prénom</span>
+              <input type="text" class="input" placeholder="Prénom" name="name" required="" id="First-Name">
+              
             </label>
     
             <label class="no">
-              <input type="text" class="input" placeholder="" name="name" required="" id="First-Name">
-                <span>Nom</span>
+              <input type="text" class="input" placeholder="Nom" name="name" required="" id="Last-Name">
             </label>
           </div>  
                 
         <label>
-            <input class="input" type="email" placeholder="" required="">
-            <span>Email</span>
+            <input class="input" type="email" placeholder="Email" required="" id="email">
         </label> 
-            
-        <label>
-            <input class="input" type="password" placeholder="" required="">
-            <span>Mot de passe</span>
+            <label>
+            <input class="input" type="password" placeholder="Mot de passe" required="" id="psswd">
         </label>
         <label>
-            <input class="input" type="password" placeholder="" required="">
-            <span>Confirmer le mot de passe</span>
+            <input class="input" type="password" placeholder="Retaper le mot de passe" required="" id="ppswd">
         </label>
-        <button class="submit">Valider</button>
-        <p class="signin">Vous avez déjà un compte ? <a href="Login_Register2.html">Se connecter</a> </p>
+        <button class="submit" id="valider">Valider</button>
+        <p class="signin">Vous avez déjà un compte ? <a href="login.html">Se connecter</a> </p>
     </form>
 <footer style="background-color: #1e1e1e; color: white; padding: 60px 0;" id="FOOT">
   <div style="max-width: 1100px; margin: auto; display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center;">

@@ -3,7 +3,53 @@
     <meta charset="UTF-8">
     <title>login page</title>
     <link href="index.html">
+    <script>
+function validerFormulaire() {
+  
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("psswd").value;
+
+  if (email === "" || password === "") {
+    alert("Tous les champs sont obligatoires");
+    return false;
+  }
+
+  if (!validerEmail(email)) {
+    alert("Adresse email invalide");
+    return false;
+  }
+
+  if (password.length < 8) {
+    alert("Le mot de passe doit contenir au moins 8 caractères");
+    return false;
+  }
+
+
+  return true;
+}
+
+function validerEmail(email) {
+  var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return regex.test(email);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("valider").addEventListener("click", function (e) {
+    e.preventDefault(); // Empêche l’envoi du formulaire
+
+    if (validerFormulaire()) {
+      alert("Formulaire valide");
+      // ✅ Redirection ici
+      window.location.href = "chatbot.html";
+    }
+  });
+});
+</script>
     <style>
+ .body{
+    background: linear-gradient(to bottom, #082746, #800365);
+  }
+  
 .form {
   margin-left: 25%;
   margin-right: 25%;
@@ -15,7 +61,7 @@
   padding: 35px;
   border-radius: 20px;
   position: relative;
-  background-color: #00bfff;;
+  background-color: beige;;
   color: #fff;
   border: 1px solid #333;
 }
@@ -147,22 +193,22 @@
 }
     </style>
   </head>
-  <body>
+  <body class="body">
     <form class="form">
         <p class="title">chatbot</p>
         <p class="message"><b>Connectez-vous</b></p>
                
         <label>
-            <input class="input" type="email" placeholder="" required="">
+            <input class="input" type="email" placeholder="" required="" id="email">
             <span>Email</span>
         </label> 
             
         <label>
-            <input class="input" type="password" placeholder="" required="">
+            <input class="input" type="password" placeholder="" required="" id="psswd">
             <span>Mot de passe</span>
         </label>
         <button class="submit">Submit</button>
-        <p class="signin">J'ai pas un compte<a href="index.html">Sign up</a> </p>
+        <p class="signin">J'ai pas un compte<a href="index.html">S'enregister</a> </p>
     </form>
   </body>
 </html>
